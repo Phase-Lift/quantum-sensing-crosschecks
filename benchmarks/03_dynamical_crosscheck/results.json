@@ -1,0 +1,506 @@
+{
+  "configuration": {
+    "dimension": 64,
+    "repetitions": 5000,
+    "position_shots_per_setting": 1000000,
+    "fleet_trials": 100000,
+    "visibility": 0.8,
+    "readout_offset": 0.03,
+    "seed": 20260906,
+    "tmax": 0.6,
+    "time_points": 8,
+    "momenta": [
+      1.0,
+      2.0
+    ]
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0"
+  },
+  "algebra": {
+    "contrast": "A",
+    "rank_full": 3,
+    "rank_kappa_known": 3,
+    "response_matrix": [
+      [
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      [
+        1.0,
+        0.0,
+        1.0,
+        1.0
+      ]
+    ],
+    "null_direction": [
+      1,
+      -1,
+      -1,
+      0
+    ],
+    "parameter_order": [
+      "beta",
+      "eta",
+      "kappa",
+      "lambda"
+    ],
+    "observation_order": [
+      "loop",
+      "initial_drift",
+      "first_order_spectrum"
+    ]
+  },
+  "dimension_convergence": [
+    {
+      "dimension": 32,
+      "maximum_mean_error": 1.777744618181032e-14,
+      "initial_slope_error": 4.440892098500626e-16,
+      "edge_probability": 1.9025734712960625e-14
+    },
+    {
+      "dimension": 48,
+      "maximum_mean_error": 8.146261443187086e-15,
+      "initial_slope_error": 4.440892098500626e-16,
+      "edge_probability": 1.7942693798434675e-25
+    },
+    {
+      "dimension": 64,
+      "maximum_mean_error": 7.882583474838611e-15,
+      "initial_slope_error": 4.440892098500626e-16,
+      "edge_probability": 1.0713359596730283e-32
+    },
+    {
+      "dimension": 96,
+      "maximum_mean_error": 0.0,
+      "initial_slope_error": 4.440892098500626e-16,
+      "edge_probability": 1.7436152829219471e-34
+    }
+  ],
+  "isospectral_counterexample": {
+    "rotation_matrix_error": 3.180701015908625e-14,
+    "maximum_low_12_eigenvalue_difference": 3.108624468950438e-14,
+    "kinetic_low_8_energies": [
+      0.5006231890126598,
+      1.503110816756698,
+      2.508072327640333,
+      3.5154906425925176,
+      4.525348985220487,
+      5.537630873237008,
+      6.552320110218962,
+      7.569400777681367
+    ],
+    "potential_low_8_energies": [
+      0.5006231890126598,
+      1.5031108167566942,
+      2.508072327640332,
+      3.5154906425924866,
+      4.525348985220487,
+      5.537630873237026,
+      6.552320110218962,
+      7.5694007776813566
+    ],
+    "first_order_spacing_slope": 0.0025,
+    "exact_lowest_spacing_difference": 0.002473883139596733
+  },
+  "complete_mimic": {
+    "free_hamiltonian_error": 0.0,
+    "pulse_generator_error": 0.0,
+    "statement": "All protocols using these same preparations, measurement operators, free and control generators have identical distributions."
+  },
+  "finite_window_audit": [
+    {
+      "case": "specified_deformation",
+      "tmax": 0.2,
+      "estimated_kinetic": 0.0024999992823218076,
+      "bias": -7.17678192482113e-10,
+      "predicted_se": 0.00176950298898266
+    },
+    {
+      "case": "specified_deformation",
+      "tmax": 0.4,
+      "estimated_kinetic": 0.0024999554454526174,
+      "bias": -4.4554547382665705e-08,
+      "predicted_se": 0.0008850109859030684
+    },
+    {
+      "case": "specified_deformation",
+      "tmax": 0.6,
+      "estimated_kinetic": 0.0024995175712169138,
+      "bias": -4.824287830862937e-07,
+      "predicted_se": 0.0005902728776112752
+    },
+    {
+      "case": "specified_deformation",
+      "tmax": 1.0,
+      "estimated_kinetic": 0.002491204486292642,
+      "bias": -8.795513707358146e-06,
+      "predicted_se": 0.0003545738633458842
+    },
+    {
+      "case": "actuator_plus_nonlinear_spring",
+      "tmax": 0.2,
+      "estimated_kinetic": 2.0734206018779844e-10,
+      "bias": 2.0734206018779844e-10,
+      "predicted_se": 0.0017692807944555695
+    },
+    {
+      "case": "actuator_plus_nonlinear_spring",
+      "tmax": 0.4,
+      "estimated_kinetic": 1.2887806238870425e-08,
+      "bias": 1.2887806238870425e-08,
+      "predicted_se": 0.000884576465021463
+    },
+    {
+      "case": "actuator_plus_nonlinear_spring",
+      "tmax": 0.6,
+      "estimated_kinetic": 1.397875381003999e-07,
+      "bias": 1.397875381003999e-07,
+      "predicted_se": 0.0005896447961128392
+    },
+    {
+      "case": "actuator_plus_nonlinear_spring",
+      "tmax": 1.0,
+      "estimated_kinetic": 2.5561532823736854e-06,
+      "bias": 2.5561532823736854e-06,
+      "predicted_se": 0.0003536412848113668
+    },
+    {
+      "case": "deformation_plus_strong_spring",
+      "tmax": 0.2,
+      "estimated_kinetic": 0.0025000003767912116,
+      "bias": 3.7679121151282247e-10,
+      "predicted_se": 0.001769332080292885
+    },
+    {
+      "case": "deformation_plus_strong_spring",
+      "tmax": 0.4,
+      "estimated_kinetic": 0.0025000225125138553,
+      "bias": 2.2512513855269672e-08,
+      "predicted_se": 0.0008846655335273503
+    },
+    {
+      "case": "deformation_plus_strong_spring",
+      "tmax": 0.6,
+      "estimated_kinetic": 0.0025002286149560238,
+      "bias": 2.2861495602372398e-07,
+      "predicted_se": 0.0005897467332403612
+    },
+    {
+      "case": "deformation_plus_strong_spring",
+      "tmax": 1.0,
+      "estimated_kinetic": 0.002503388868229539,
+      "bias": 3.3888682295390472e-06,
+      "predicted_se": 0.0003536690094173274
+    }
+  ],
+  "higher_order_audit": {
+    "first_order": 0.0025,
+    "with_p6": 0.0025531249999999894,
+    "fractional_difference": 0.021249999999995772,
+    "caveat": "Retains the next local tangent expansion term, not a global minimal-length operator theory."
+  },
+  "preparation_calibration_counterexample": {
+    "actual_mean_momentum": "q+zeta*q^3",
+    "zeta": 0.0033333333333333335,
+    "inferred_kinetic_if_nominal_q_is_used": 0.0025,
+    "fractional_momentum_error_at_q1": 0.0033333333333333335,
+    "fractional_momentum_error_at_q2": 0.013333333333333334,
+    "scope": "Mimics the slope contrast; not a claim of identical full trajectories."
+  },
+  "sampling": [
+    {
+      "case": {
+        "name": "null",
+        "beta": 0.0,
+        "eta": 0.0,
+        "kappa": 0.0,
+        "lam": 0.0
+      },
+      "estimated_kinetic": {
+        "mean": 2.737325445862171e-06,
+        "standard_deviation": 0.0005907377415633796,
+        "target": 0.0,
+        "analytic_standard_error": 0.000589774262752931,
+        "coverage_95": 0.9502
+      },
+      "estimated_loop": {
+        "mean": 2.196788593858063e-06,
+        "standard_deviation": 0.0004967224203290413,
+        "target": 0.0,
+        "analytic_standard_error": 0.0004941859711157875,
+        "coverage_95": 0.9494
+      },
+      "conditional_eta": {
+        "mean": -5.405368520041083e-07,
+        "standard_deviation": 0.0007711474373020959,
+        "target": 0.0,
+        "analytic_standard_error": 0.0007694500991314623,
+        "coverage_95": 0.9506
+      },
+      "estimator_bias_at_infinite_shots": 8.326672684688674e-16,
+      "kappa_zero_assumption_correct": true,
+      "false_beta_detection_rate_under_kappa_zero": 0.0498
+    },
+    {
+      "case": {
+        "name": "specified_deformation",
+        "beta": 0.0025,
+        "eta": 0.0,
+        "kappa": 0.0,
+        "lam": 0.0
+      },
+      "estimated_kinetic": {
+        "mean": 0.002489156457718354,
+        "standard_deviation": 0.0005934851065498143,
+        "target": 0.0025,
+        "analytic_standard_error": 0.0005902728776112752,
+        "coverage_95": 0.9474
+      },
+      "estimated_loop": {
+        "mean": 0.0025071574651256926,
+        "standard_deviation": 0.0004930241145210275,
+        "target": 0.0025,
+        "analytic_standard_error": 0.0004942216774593075,
+        "coverage_95": 0.9498
+      },
+      "conditional_eta": {
+        "mean": 1.800100740733857e-05,
+        "standard_deviation": 0.0007701866481303142,
+        "target": 0.0,
+        "analytic_standard_error": 0.000769855269848942,
+        "coverage_95": 0.952
+      },
+      "estimator_bias_at_infinite_shots": -4.824287830862937e-07,
+      "kappa_zero_assumption_correct": true,
+      "false_beta_detection_rate_under_kappa_zero": 0.9888
+    },
+    {
+      "case": {
+        "name": "actuator_only",
+        "beta": 0.0,
+        "eta": 0.0025,
+        "kappa": 0.0,
+        "lam": 0.0
+      },
+      "estimated_kinetic": {
+        "mean": 6.408904443895135e-07,
+        "standard_deviation": 0.0005876191849497905,
+        "target": 0.0,
+        "analytic_standard_error": 0.000589774262752931,
+        "coverage_95": 0.9496
+      },
+      "estimated_loop": {
+        "mean": 0.0025090976738514647,
+        "standard_deviation": 0.0004894204034968393,
+        "target": 0.0025,
+        "analytic_standard_error": 0.0004942216774593075,
+        "coverage_95": 0.9522
+      },
+      "conditional_eta": {
+        "mean": 0.0025084567834070754,
+        "standard_deviation": 0.0007655509120748299,
+        "target": 0.0025,
+        "analytic_standard_error": 0.0007694730323256657,
+        "coverage_95": 0.9552
+      },
+      "estimator_bias_at_infinite_shots": 8.326672684688674e-16,
+      "kappa_zero_assumption_correct": true,
+      "false_beta_detection_rate_under_kappa_zero": 0.0504
+    },
+    {
+      "case": {
+        "name": "actuator_plus_nonlinear_spring",
+        "beta": 0.0,
+        "eta": 0.0025,
+        "kappa": 0.0,
+        "lam": 0.0025
+      },
+      "estimated_kinetic": {
+        "mean": -2.7682074822811762e-06,
+        "standard_deviation": 0.0005828929832620044,
+        "target": 0.0,
+        "analytic_standard_error": 0.0005896447961128392,
+        "coverage_95": 0.9534
+      },
+      "estimated_loop": {
+        "mean": 0.0024964922158580306,
+        "standard_deviation": 0.0004966654408583674,
+        "target": 0.0025,
+        "analytic_standard_error": 0.0004942216774593075,
+        "coverage_95": 0.9488
+      },
+      "conditional_eta": {
+        "mean": 0.002499260423340312,
+        "standard_deviation": 0.0007664031621631799,
+        "target": 0.0025,
+        "analytic_standard_error": 0.0007693738051517244,
+        "coverage_95": 0.9498
+      },
+      "estimator_bias_at_infinite_shots": 1.397875381003999e-07,
+      "kappa_zero_assumption_correct": true,
+      "false_beta_detection_rate_under_kappa_zero": 0.0466
+    },
+    {
+      "case": {
+        "name": "conventional_complete_mimic",
+        "beta": 0.0,
+        "eta": 0.0025,
+        "kappa": 0.0025,
+        "lam": 0.0
+      },
+      "estimated_kinetic": {
+        "mean": 0.0025180028556701004,
+        "standard_deviation": 0.0005914306729438332,
+        "target": 0.0025,
+        "analytic_standard_error": 0.0005902728776112752,
+        "coverage_95": 0.9492
+      },
+      "estimated_loop": {
+        "mean": 0.002508553469192759,
+        "standard_deviation": 0.0004949900984267941,
+        "target": 0.0025,
+        "analytic_standard_error": 0.0004942216774593075,
+        "coverage_95": 0.9508
+      },
+      "conditional_eta": {
+        "mean": -9.449386477340957e-06,
+        "standard_deviation": 0.0007712942952432904,
+        "target": 0.0,
+        "analytic_standard_error": 0.000769855269848942,
+        "coverage_95": 0.9488
+      },
+      "estimator_bias_at_infinite_shots": -4.824287830862937e-07,
+      "kappa_zero_assumption_correct": false,
+      "false_beta_detection_rate_under_kappa_zero": 0.9902
+    },
+    {
+      "case": {
+        "name": "mixed_with_nonlinear_spring",
+        "beta": 0.0015,
+        "eta": 0.001,
+        "kappa": 0.0,
+        "lam": 0.01
+      },
+      "estimated_kinetic": {
+        "mean": 0.0015049384252489454,
+        "standard_deviation": 0.0005869312640357305,
+        "target": 0.0015,
+        "analytic_standard_error": 0.0005895475922950755,
+        "coverage_95": 0.9504
+      },
+      "estimated_loop": {
+        "mean": 0.0024970043038000872,
+        "standard_deviation": 0.0004905380115844777,
+        "target": 0.0025,
+        "analytic_standard_error": 0.0004942216774593075,
+        "coverage_95": 0.952
+      },
+      "conditional_eta": {
+        "mean": 0.0009920658785511416,
+        "standard_deviation": 0.0007644912081500796,
+        "target": 0.001,
+        "analytic_standard_error": 0.0007692993110952409,
+        "coverage_95": 0.9518
+      },
+      "estimator_bias_at_infinite_shots": 3.748957418960551e-07,
+      "kappa_zero_assumption_correct": true,
+      "false_beta_detection_rate_under_kappa_zero": 0.723
+    }
+  ],
+  "resources_per_simulated_experiment": {
+    "position_settings": 32,
+    "destructive_position_readings": 32000000,
+    "additional_ghz_preparations": 100000,
+    "additional_local_qubit_readings": 300000,
+    "unit_time": "tau=omega*t",
+    "note": "No equal-resource sensitivity advantage is claimed. Calibration, state preparation, readout engineering and dissipative costs are not modeled."
+  },
+  "independent_calibration_floors": [
+    {
+      "independent_kappa_se": 0.0,
+      "beta_standard_error": 0.0005902728776112752,
+      "infinite_shot_floor": 0.0
+    },
+    {
+      "independent_kappa_se": 0.0001,
+      "beta_standard_error": 0.0005986836143101759,
+      "infinite_shot_floor": 0.0001
+    },
+    {
+      "independent_kappa_se": 0.001,
+      "beta_standard_error": 0.00116121577238836,
+      "infinite_shot_floor": 0.001
+    },
+    {
+      "independent_kappa_se": 0.01,
+      "beta_standard_error": 0.010017405955138461,
+      "infinite_shot_floor": 0.01
+    }
+  ],
+  "calibration_certificate_examples": [
+    {
+      "label": "no_independent_bounds",
+      "eta_bound": null,
+      "kappa_bound": null,
+      "bounds_are_hypothetical_not_experimental": true,
+      "lower": null,
+      "upper": null,
+      "lower_unbounded": true,
+      "upper_unbounded": true,
+      "empty": false,
+      "zero_excluded": false,
+      "z": 2.241402727604947,
+      "confidence_at_least": 0.95,
+      "interpretation": "Conditional on the chosen dynamics, asymptotic normal error model and independently valid nuisance/bias bounds. Empty means model/bounds inconsistency, not discovery."
+    },
+    {
+      "label": "assumed_loose_bounds",
+      "eta_bound": 0.003,
+      "kappa_bound": 0.003,
+      "bounds_are_hypothetical_not_experimental": true,
+      "lower": -0.0016077498158987842,
+      "upper": 0.006607749815898784,
+      "lower_unbounded": false,
+      "upper_unbounded": false,
+      "empty": false,
+      "zero_excluded": false,
+      "z": 2.241402727604947,
+      "confidence_at_least": 0.95,
+      "interpretation": "Conditional on the chosen dynamics, asymptotic normal error model and independently valid nuisance/bias bounds. Empty means model/bounds inconsistency, not discovery."
+    },
+    {
+      "label": "assumed_tight_bounds",
+      "eta_bound": 0.0001,
+      "kappa_bound": 0.0001,
+      "bounds_are_hypothetical_not_experimental": true,
+      "lower": 0.0012922501841012158,
+      "upper": 0.003707749815898784,
+      "lower_unbounded": false,
+      "upper_unbounded": false,
+      "empty": false,
+      "zero_excluded": true,
+      "z": 2.241402727604947,
+      "confidence_at_least": 0.95,
+      "interpretation": "Conditional on the chosen dynamics, asymptotic normal error model and independently valid nuisance/bias bounds. Empty means model/bounds inconsistency, not discovery."
+    }
+  ],
+  "status": {
+    "algebra_passed": true,
+    "matrix_checks_passed": true,
+    "actuator_only_distinguishable_under_completion": true,
+    "nonlinear_spring_distinguishable_by_initial_drift": true,
+    "complete_conventional_mimic_distinguishable": false,
+    "physically_validated_subplanck_sensitivity": false
+  }
+}

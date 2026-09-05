@@ -1,0 +1,257 @@
+{
+  "version": "0.2",
+  "status": "Conditional derivation and simulation; no hardware or sub-Planck observation",
+  "config": {
+    "a": 0.5,
+    "b": 0.5,
+    "q0": 1.0,
+    "g": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "beta": 0.0025,
+    "eta": 0.0,
+    "visibility": 0.8,
+    "trials_per_experiment": 100000,
+    "repetitions": 20000,
+    "seed": 20260905
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "sympy": "1.14.0"
+  },
+  "symbolic_walsh_coefficients": {
+    "000": "-8*a*b*(a**2*beta*g1**4 + 6*a**2*beta*g1**2*g2**2 + 6*a**2*beta*g1**2*g3**2 + 6*a**2*beta*g1**2*q0**2 + a**2*beta*g2**4 + 6*a**2*beta*g2**2*g3**2 + 6*a**2*beta*g2**2*q0**2 + a**2*beta*g3**4 + 6*a**2*beta*g3**2*q0**2 + a**2*beta*q0**4 + 3*beta*g1**2*p**2 + 3*beta*g2**2*p**2 + 3*beta*g3**2*p**2 + 3*beta*p**2*q0**2 + 3*g1**2 + 3*g2**2 + 3*g3**2 + 3*q0**2)/3",
+    "001": "0",
+    "010": "0",
+    "011": "0",
+    "100": "0",
+    "101": "0",
+    "110": "0",
+    "111": "-64*a**3*b*beta*g1*g2*g3*q0"
+  },
+  "matrix_convergence": [
+    {
+      "dimension": 32,
+      "phase": 0.020000000000014114,
+      "coherence_modulus": 0.9999999999999183,
+      "complex_error": 8.287888427057738e-14
+    },
+    {
+      "dimension": 48,
+      "phase": 0.02000000000001018,
+      "coherence_modulus": 0.9999999999999915,
+      "complex_error": 1.330578817780868e-14
+    },
+    {
+      "dimension": 64,
+      "phase": 0.020000000000010933,
+      "coherence_modulus": 1.0000000000001357,
+      "complex_error": 1.3602199793779479e-13
+    },
+    {
+      "dimension": 96,
+      "phase": 0.020000000000004934,
+      "coherence_modulus": 0.9999999999999278,
+      "complex_error": 7.235957688110489e-14
+    }
+  ],
+  "unequal_coupling_check": {
+    "config": {
+      "a": 0.45,
+      "b": 0.3,
+      "q0": 0.7,
+      "g": [
+        0.4,
+        0.8,
+        1.1
+      ],
+      "beta": 0.004,
+      "eta": 0.0,
+      "visibility": 0.8,
+      "trials_per_experiment": 100000,
+      "repetitions": 20000,
+      "seed": 20260905
+    },
+    "expected_phase": 0.0034488115200000014,
+    "matrix_phase": 0.003448811519999297,
+    "error": 1.7608139850297853e-13
+  },
+  "thermal_matrix_check": {
+    "mean_occupation": 1.0,
+    "dimension": 96,
+    "phase": 0.020000000000006176,
+    "error": 4.1865128627012114e-14
+  },
+  "cases": [
+    {
+      "case": "canonical_ideal",
+      "phase_radians": 0.0,
+      "coherence_modulus": 0.9999999999999998,
+      "expected_parity": 0.0
+    },
+    {
+      "case": "specified_deformation",
+      "phase_radians": 0.02000000000000135,
+      "coherence_modulus": 0.9999999999999999,
+      "expected_parity": 0.015998933354667542
+    },
+    {
+      "case": "ordinary_cubic_actuator_mimic",
+      "phase_radians": 0.02000000000000135,
+      "coherence_modulus": 0.9999999999999999,
+      "expected_parity": 0.015998933354667542
+    },
+    {
+      "case": "bias_reversed",
+      "phase_radians": -0.02000000000000135,
+      "coherence_modulus": 0.9999999999999999,
+      "expected_parity": -0.015998933354667542
+    },
+    {
+      "case": "bias_off",
+      "phase_radians": 0.0,
+      "coherence_modulus": 0.9999999999999998,
+      "expected_parity": 0.0
+    },
+    {
+      "case": "one_sensor_decoupled",
+      "phase_radians": -4.640558275833628e-16,
+      "coherence_modulus": 0.9999999999999998,
+      "expected_parity": -3.712446620666902e-16
+    },
+    {
+      "case": "canonical_one_block_0.1pct_imbalance",
+      "phase_radians": 0.0060000000000002265,
+      "coherence_modulus": 0.9999999999999999,
+      "expected_parity": 0.004799971200052021
+    }
+  ],
+  "max_static_diagonal_nuisance_error": 4.508178863432563e-15,
+  "second_order_momentum_model": [
+    {
+      "momentum_variance": 0.5,
+      "phase": 0.020199999998669126,
+      "coherence_modulus": 0.9999999900000003,
+      "relative_phase_change": 0.00999999993345635
+    },
+    {
+      "momentum_variance": 2.5,
+      "phase": 0.02059999983333536,
+      "coherence_modulus": 0.9999997500001562,
+      "relative_phase_change": 0.029999991666767922
+    },
+    {
+      "momentum_variance": 10.5,
+      "phase": 0.022199987652133376,
+      "coherence_modulus": 0.9999955900486195,
+      "relative_phase_change": 0.10999938260666875
+    }
+  ],
+  "monte_carlo": [
+    {
+      "case": "deformation",
+      "true_effective_beta": 0.0025,
+      "mean_effective_beta": 0.0024967665589425495,
+      "std_effective_beta": 0.0004955665344089573,
+      "mean_recovered_phase": 0.019974132471540396,
+      "total_triples_per_experiment": 100000,
+      "repetitions": 20000
+    },
+    {
+      "case": "actuator_mimic",
+      "true_effective_beta": 0.0025,
+      "mean_effective_beta": 0.0025026634919821833,
+      "std_effective_beta": 0.0004975984390733637,
+      "mean_recovered_phase": 0.020021307935857467,
+      "total_triples_per_experiment": 100000,
+      "repetitions": 20000
+    },
+    {
+      "case": "null",
+      "true_effective_beta": 0.0,
+      "mean_effective_beta": 5.71257329634938e-07,
+      "std_effective_beta": 0.0004911450896265452,
+      "mean_recovered_phase": 4.570058637079504e-06,
+      "total_triples_per_experiment": 100000,
+      "repetitions": 20000
+    }
+  ],
+  "raw_record_summary": {
+    "triples": 100000,
+    "single_means": [
+      -0.00836,
+      0.0057,
+      -0.00086
+    ],
+    "pair_means": [
+      -0.0005,
+      -0.0015,
+      0.00104
+    ],
+    "parity_mean": 0.01176
+  },
+  "identifiability": {
+    "parameter_order": [
+      "beta",
+      "eta",
+      "block_imbalance",
+      "common_readout_offset"
+    ],
+    "rank": 3,
+    "parameter_count": 4,
+    "singular_values": [
+      51.35282169304014,
+      4.1039786162731495,
+      2.4494897427831774,
+      4.170255900366802e-15
+    ],
+    "reduced_effective_parameter_rank": 3,
+    "interpretation": "All measured controls depend on beta+eta, never beta and eta separately."
+  },
+  "units": {
+    "assumed_mass_kg": 1e-11,
+    "assumed_frequency_Hz": 100000.0,
+    "pstar_kg_m_per_s": 2.5741154111655522e-20,
+    "xstar_m": 4.096831917760243e-15,
+    "planck_mass_kg": 2.176434e-08,
+    "planck_length_m": 1.616255e-35,
+    "beta_per_unit_beta0": 1.556408593392593e-41,
+    "toy_beta0": 1.606262012824413e+38
+  },
+  "length_scale_examples": [
+    {
+      "beta0": 1.0,
+      "model_minimal_length_m": 1.616255e-35,
+      "dimensionless_beta": 1.556408593392593e-41,
+      "phase_radians": 1.2451268747140745e-40,
+      "expected_5_null_standard_error_trials": 2.519607083830795e+81
+    },
+    {
+      "beta0": 0.01,
+      "model_minimal_length_m": 1.6162550000000002e-36,
+      "dimensionless_beta": 1.556408593392593e-43,
+      "phase_radians": 1.2451268747140745e-42,
+      "expected_5_null_standard_error_trials": 2.5196070838307953e+85
+    }
+  ],
+  "amplification_illustration": {
+    "target_phase": 0.02,
+    "a_equals_b": 1780016801.0395842,
+    "largest_conditional_kick": 7120067204.158337,
+    "corresponding_position_translation_m": 2.916971857859381e-05,
+    "one_block_fractional_a_error_for_signal_sized_leakage": 2.6300896422345196e-22,
+    "status": "Ideal algebra only; no feasible implementation or precision demonstrated."
+  },
+  "resources": {
+    "oscillator_pulses_per_trial": 32,
+    "symmetric_loop_pairs": 4,
+    "individual_qubit_X_gates_for_closed_toggling_cycle": 8,
+    "preparations_per_two_setting_experiment": 100000,
+    "local_readings_per_two_setting_experiment": 300000,
+    "oscillator_pulses_per_two_setting_experiment": 3200000
+  },
+  "checks_passed": true
+}

@@ -1,0 +1,15 @@
+{
+  "dimension": 64,
+  "repetitions": 5000,
+  "position_shots_per_setting": 1000000,
+  "fleet_trials": 100000,
+  "visibility": 0.8,
+  "readout_offset": 0.03,
+  "seed": 20260906,
+  "tmax": 0.6,
+  "time_points": 8,
+  "momenta": [
+    1.0,
+    2.0
+  ]
+}

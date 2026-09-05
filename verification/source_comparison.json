@@ -1,0 +1,18 @@
+[
+  {
+    "file": "benchmarks/01_joint_visibility/joint_visibility.py",
+    "executable_ast_unchanged_except_import_rename": true
+  },
+  {
+    "file": "benchmarks/02_commutator_controls/commutator_controls.py",
+    "executable_ast_unchanged_except_import_rename": true
+  },
+  {
+    "file": "benchmarks/03_dynamical_crosscheck/oscillator_crosscheck.py",
+    "executable_ast_unchanged_except_import_rename": true
+  },
+  {
+    "file": "benchmarks/03_dynamical_crosscheck/test_crosscheck.py",
+    "executable_ast_unchanged_except_import_rename": true
+  }
+]

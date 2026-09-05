@@ -1,0 +1,14 @@
+HISTORICAL TEST OUTPUT FROM THE SUPPLIED v0.3 PACKAGE
+Module display names updated for this publication copy.
+
+test_certificate_is_conditional_not_automatic (test_crosscheck.CrossCheckTests.test_certificate_is_conditional_not_automatic) ... ok
+test_deformation_and_complete_mimic_same_generator (test_crosscheck.CrossCheckTests.test_deformation_and_complete_mimic_same_generator) ... ok
+test_initial_slope_is_not_spring_response (test_crosscheck.CrossCheckTests.test_initial_slope_is_not_spring_response) ... ok
+test_no_calibration_means_no_attribution_interval (test_crosscheck.CrossCheckTests.test_no_calibration_means_no_attribution_interval) ... ok
+test_symbolic_identifiability (test_crosscheck.CrossCheckTests.test_symbolic_identifiability) ... ok
+test_window_extrapolation (test_crosscheck.CrossCheckTests.test_window_extrapolation) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.044s
+
+OK

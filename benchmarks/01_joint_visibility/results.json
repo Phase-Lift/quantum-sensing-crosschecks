@@ -1,0 +1,198 @@
+{
+  "status": "TOY_MODEL_ONLY_NOT_A_PLANCK_SCALE_OBSERVATION",
+  "seed": 20260904,
+  "model": {
+    "n": 3,
+    "visibility": 0.8,
+    "H0_phase_rad": 0.0,
+    "H1_phase_rad": 0.02,
+    "measurement": "X tensor X tensor Y",
+    "probability": "P(x1,x2,x3|phi) = (1+v*sin(phi)*x1*x2*x3)/8",
+    "assumptions": [
+      "Independent identical state preparations",
+      "Calibrated phase reference and visibility",
+      "Aligned shot identities",
+      "No adversarial or unmodeled correlated noise",
+      "The phase is an input, not a derived sub-Planck signal"
+    ]
+  },
+  "exact_checks": {
+    "proper_reduced_state_max_differences": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.0,
+      "0,1": 0.0,
+      "0,2": 0.0,
+      "1,2": 0.0
+    },
+    "max_Born_rule_vs_closed_form_error": 0.0,
+    "minimum_density_eigenvalue": -6.849422727564673e-32,
+    "maximum_density_trace_error": 0.0,
+    "checks_passed": true
+  },
+  "classification": [
+    {
+      "shots": 1000,
+      "sensor_readings": 3000,
+      "decision_H1_when_positive_parity_count_at_least": 504,
+      "false_positive_probability": 0.4124131265728033,
+      "false_negative_probability": 0.3879213146467312,
+      "exact_equal_prior_accuracy": 0.5998327793902327,
+      "monte_carlo_equal_prior_accuracy": 0.599825,
+      "monte_carlo_standard_error": 0.0024488949239726762,
+      "monte_carlo_trials_per_hypothesis": 20000,
+      "any_fixed_proper_subset_exact_accuracy": 0.5
+    },
+    {
+      "shots": 10000,
+      "sensor_readings": 30000,
+      "decision_H1_when_positive_parity_count_at_least": 5040,
+      "false_positive_probability": 0.2147646070539018,
+      "false_negative_probability": 0.20896634292183397,
+      "exact_equal_prior_accuracy": 0.7881345250121321,
+      "monte_carlo_equal_prior_accuracy": 0.7888,
+      "monte_carlo_standard_error": 0.002043098691505728,
+      "monte_carlo_trials_per_hypothesis": 20000,
+      "any_fixed_proper_subset_exact_accuracy": 0.5
+    },
+    {
+      "shots": 100000,
+      "sensor_readings": 300000,
+      "decision_H1_when_positive_parity_count_at_least": 50400,
+      "false_positive_probability": 0.00575746274511451,
+      "false_negative_probability": 0.0056562998829193046,
+      "exact_equal_prior_accuracy": 0.9942931186859831,
+      "monte_carlo_equal_prior_accuracy": 0.99515,
+      "monte_carlo_standard_error": 0.00037664008885152745,
+      "monte_carlo_trials_per_hypothesis": 20000,
+      "any_fixed_proper_subset_exact_accuracy": 0.5
+    },
+    {
+      "shots": 1000000,
+      "sensor_readings": 3000000,
+      "decision_H1_when_positive_parity_count_at_least": 504000,
+      "false_positive_probability": 6.269548031238342e-16,
+      "false_negative_probability": 6.187535352569571e-16,
+      "exact_equal_prior_accuracy": 0.9999999999999993,
+      "monte_carlo_equal_prior_accuracy": 1.0,
+      "monte_carlo_standard_error": 1.247852324185834e-10,
+      "monte_carlo_trials_per_hypothesis": 20000,
+      "any_fixed_proper_subset_exact_accuracy": 0.5
+    }
+  ],
+  "one_raw_record_demo": {
+    "shots": 100000,
+    "single_means": [
+      -0.00126,
+      -0.0023,
+      -0.00016
+    ],
+    "pair_means": {
+      "0,1": -0.00376,
+      "0,2": -0.00422,
+      "1,2": 0.00094
+    },
+    "triple_correlation": 0.01852,
+    "expected_triple_correlation": 0.015998933354666466,
+    "estimated_phase_rad": 0.02315206826647841,
+    "true_phase_rad": 0.02,
+    "phase_standard_error_delta_method": 0.003953131745861252,
+    "zero_phase_control_correlation": -0.00646,
+    "shuffled_alignment_control_correlation": 0.0,
+    "controls_note": "These detect selected pipeline errors, not all ordinary correlated noise or quantum-gravity alternatives."
+  },
+  "nuisance_identifiability": {
+    "assumption": "Known setting reversal flips theta but leaves the same additive bias b and visibility unchanged; all phases stay on the local arcsin branch.",
+    "theta_rad": 0.02,
+    "bias_rad": 0.03,
+    "total_shots": 100000,
+    "total_sensor_readings": 300000,
+    "single_setting_fisher_matrix": [
+      [
+        63942.35583016441,
+        63942.35583016441
+      ],
+      [
+        63942.35583016441,
+        63942.35583016441
+      ]
+    ],
+    "single_setting_rank": 1,
+    "exact_degenerate_single_setting_models": [
+      {
+        "theta": 0.02,
+        "bias": 0.03
+      },
+      {
+        "theta": 0.0,
+        "bias": 0.05
+      }
+    ],
+    "two_setting_fisher_matrix": [
+      [
+        63970.02587975389,
+        -27.670049589483824
+      ],
+      [
+        -27.670049589483824,
+        63970.02587975389
+      ]
+    ],
+    "two_setting_rank": 2,
+    "local_CR_standard_deviation_theta": 0.00395377341967446,
+    "monte_carlo_theta_mean": 0.019996948399205475,
+    "monte_carlo_theta_sd": 0.003928294997719724,
+    "monte_carlo_bias_mean": 0.029999075692187318,
+    "warning": "No physical mechanism providing this discriminating reversal has been derived for Planck-scale physics."
+  },
+  "fleet_size_fixed_read_budget_audit": [
+    {
+      "fleet_size": 2,
+      "shots": 150000,
+      "independent_readout_error_per_sensor": 0.05,
+      "effective_visibility": 0.81,
+      "mean_parity_shift_over_null_standard_error": 6.27381474702019
+    },
+    {
+      "fleet_size": 3,
+      "shots": 100000,
+      "independent_readout_error_per_sensor": 0.05,
+      "effective_visibility": 0.7290000000000001,
+      "mean_parity_shift_over_null_standard_error": 4.610293461284339
+    },
+    {
+      "fleet_size": 5,
+      "shots": 60000,
+      "independent_readout_error_per_sensor": 0.05,
+      "effective_visibility": 0.5904900000000001,
+      "mean_parity_shift_over_null_standard_error": 2.892605547062677
+    },
+    {
+      "fleet_size": 10,
+      "shots": 30000,
+      "independent_readout_error_per_sensor": 0.05,
+      "effective_visibility": 0.3486784401000001,
+      "mean_parity_shift_over_null_standard_error": 1.2077770252880837
+    }
+  ],
+  "hypothetical_linear_length_coupling": {
+    "assumed_relation": "phi = ell / L; NOT a gravity prediction",
+    "L_m": 1.0,
+    "ell_m": 1.6162550000000002e-36,
+    "ell_over_planck_length": 0.1,
+    "visibility": 0.8,
+    "N_for_expected_shift_5_null_standard_errors": 1.495341105666646e+73,
+    "note": "Approximate small-phase, iid shot-noise scaling. An expected 5-sigma shift is not a specified detection power, and this is not a universal length bound."
+  },
+  "resource_limit": "A single integrated instrument with the same state and measurements reproduces the joint statistic. Proper-subset tests are ablations, not a comparison with the best alternative sensor design.",
+  "provenance": {
+    "numpy_version": "2.3.5",
+    "references": [
+      "https://arxiv.org/abs/0707.4428",
+      "https://arxiv.org/abs/1707.06252",
+      "https://arxiv.org/abs/2410.00970",
+      "https://arxiv.org/abs/2211.09902",
+      "https://physics.nist.gov/cgi-bin/cuu/Value?plkl"
+    ]
+  }
+}

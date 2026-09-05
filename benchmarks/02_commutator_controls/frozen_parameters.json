@@ -1,0 +1,16 @@
+{
+  "a": 0.5,
+  "b": 0.5,
+  "q0": 1.0,
+  "g": [
+    1.0,
+    1.0,
+    1.0
+  ],
+  "beta": 0.0025,
+  "eta": 0.0,
+  "visibility": 0.8,
+  "trials_per_experiment": 100000,
+  "repetitions": 20000,
+  "seed": 20260905
+}
